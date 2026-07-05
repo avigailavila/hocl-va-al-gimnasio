@@ -1,24 +1,250 @@
+/* ===== Layout general ===== */
 body {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
-  width: min(1200px, calc(100% - 2rem));
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 0 3rem;
+  padding: 2rem 1rem 3rem;
 }
 
-section {
-  margin-bottom: 1.5rem;
+/* ===== Secciones ===== */
+.section-block {
+  margin-bottom: 3rem;
 }
 
-.container {
+.section-block:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== Hero ===== */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem 1rem;
+}
+
+.hero-copy {
+  max-width: 700px;
+  text-align: center;
+}
+
+.hero-image {
+  max-width: 500px;
   width: 100%;
 }
 
-@media (max-width: 720px) {
+/* ===== Cards grid ===== */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ===== Testimonios grid ===== */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ===== Content row (Solución) ===== */
+.content-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.content-text {
+  flex: 1 1 400px;
+}
+
+.content-media {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+/* ===== CTA ===== */
+.cta-block {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  max-width: 500px;
+  margin: 1.5rem auto 0;
+}
+
+.cta-form label {
+  width: 100%;
+  text-align: left;
+}
+
+.cta-form input[type="email"] {
+  flex: 1 1 200px;
+}
+
+.cta-form button {
+  flex: 0 0 auto;
+}
+
+/* ===== Footer ===== */
+.footer {
+  margin-top: auto;
+  padding: 2rem 1rem;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-legal {
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* ===== Topbar ===== */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.top-nav {
+  display: flex;
+  gap: 1.2rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
   main {
-    width: min(100% - 1.25rem, 1200px);
-    padding: 1rem 0 2rem;
+    padding: 1.5rem 0.75rem 2rem;
+  }
+
+  .hero {
+    padding: 2.5rem 0.75rem;
+    gap: 1.5rem;
+  }
+
+  .hero-copy h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero-copy p {
+    font-size: 1rem;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .content-row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .content-text,
+  .content-media {
+    flex: 1 1 100%;
+  }
+
+  .topbar {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .top-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-nav {
+    justify-content: center;
+  }
+
+  .cta-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cta-form input[type="email"] {
+    flex: 1 1 auto;
+  }
+
+  .cta-form button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-copy h2 {
+    font-size: 1.4rem;
+  }
+
+  .hero-copy p {
+    font-size: 0.95rem;
+  }
+
+  .section-block {
+    margin-bottom: 2rem;
+  }
+
+  .topbar {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .top-nav a {
+    font-size: 0.9rem;
   }
 }
