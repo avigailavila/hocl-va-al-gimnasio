@@ -10,302 +10,205 @@
     <link rel="stylesheet" href="css/components.css" />
   </head>
   <body>
-    <main id="app"></main>
-    <script src="js/main.js"></script>
-    <script src="js/form.js"></script>
-  </body>
-</html>
+    <!-- Header / Navegación -->
     <header class="topbar">
       <div class="brand">
         <div class="brand-mark">HOCL</div>
         <div>
-          <h1>Ácido hipocloroso en cosmiatría</h1>
-          <p>Una experiencia de lectura más abierta y fácil de recorrer</p>
+          <h1>Ácido hipocloroso para gimnasios</h1>
+          <p>Desinfección segura y eficaz para espacios de entrenamiento</p>
         </div>
       </div>
       <nav class="top-nav" aria-label="Navegación principal">
-        <a href="#inicio">Inicio</a>
-        <a href="#explorar">Explorar</a>
-        <a href="#contenido">Leer</a>
+        <a href="#hero">Inicio</a>
+        <a href="#problemas">Problemas</a>
+        <a href="#solucion">Solución</a>
+        <a href="#evidencia">Evidencia</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#cta">Descargar guía</a>
       </nav>
     </header>
 
     <main>
-      <section class="hero" id="inicio">
+      <!-- Hero -->
+      <section class="hero" id="hero">
         <div class="hero-copy">
-          <span class="pill">Lectura completa · Dinámica</span>
-          <h2>Todo el contenido del libro, organizado para leer con calma y sin perderse.</h2>
-          <p>Esta página transforma el archivo Markdown en una experiencia más flexible, con menú de navegación, exploración por secciones y búsqueda rápida para moverte por el texto completo.</p>
+          <span class="pill">Desinfección profesional · Sin químicos agresivos</span>
+          <h2>Mantén tu gimnasio libre de patógenos con ácido hipocloroso</h2>
+          <p>El ácido hipocloroso (HOCl) es un desinfectante de amplio espectro, seguro para personas y equipos, que elimina bacterias, virus y hongos sin dejar residuos tóxicos.</p>
           <div class="hero-actions">
-            <a class="btn primary" href="#contenido">Comenzar a leer</a>
-            <a class="btn secondary" href="#explorar">Explorar secciones</a>
+            <a class="btn primary" href="#cta">Descargar guía gratuita</a>
+            <a class="btn secondary" href="#solucion">Conocer más</a>
           </div>
         </div>
-        <div class="utility-card">
-          <label for="search">Buscar en el libro</label>
-          <input id="search" class="search" type="search" placeholder="Escribe un tema o palabra clave" />
-          <div class="stats">
-            <div class="stat">
-              <strong id="block-count">0</strong>
-              <span>bloques renderizados</span>
-            </div>
-            <div class="stat">
-              <strong id="section-count">0</strong>
-              <span>secciones principales</span>
-            </div>
-          </div>
+        <div class="hero-image">
+          <!-- Imagen ilustrativa (placeholder) -->
+          <img src="img/hero-placeholder.svg" alt="Gimnasio desinfectado con HOCl" />
         </div>
       </section>
 
-      <section class="section-block" id="explorar">
+      <!-- Problemas -->
+      <section class="section-block" id="problemas">
         <div class="section-title">
-          <h3>Explorar por secciones</h3>
-          <p>Accede directamente a los temas principales.</p>
+          <h3>Riesgos sanitarios en gimnasios</h3>
+          <p>Los espacios de entrenamiento concentran sudor, bacterias y virus que pueden propagarse rápidamente.</p>
         </div>
-        <div id="section-grid" class="section-grid"></div>
+        <div class="cards-grid">
+          <article class="card">
+            <h4>Superficies contaminadas</h4>
+            <p>Máquinas, pesas, colchonetas y vestuarios acumulan microorganismos que sobreviven horas o días.</p>
+          </article>
+          <article class="card">
+            <h4>Infecciones cutáneas</h4>
+            <p>Hongos como el pie de atleta y bacterias como el estafilococo se transmiten por contacto directo.</p>
+          </article>
+          <article class="card">
+            <h4>Virus respiratorios</h4>
+            <p>Gripe, resfriados y COVID‑19 se propagan en espacios cerrados con alta afluencia de personas.</p>
+          </article>
+          <article class="card">
+            <h4>Productos agresivos</h4>
+            <p>Muchos desinfectantes convencionales irritan la piel, dañan equipos y dejan olores fuertes.</p>
+          </article>
+        </div>
       </section>
 
-      <section class="reader-layout" id="contenido">
-        <aside class="side-panel">
-          <h3>Índice rápido</h3>
-          <div id="toc" class="toc"></div>
-        </aside>
+      <!-- Solución -->
+      <section class="section-block" id="solucion">
+        <div class="section-title">
+          <h3>¿Qué es el ácido hipocloroso?</h3>
+          <p>Un desinfectante natural que el propio cuerpo humano produce para combatir infecciones.</p>
+        </div>
+        <div class="content-row">
+          <div class="content-text">
+            <p>El HOCl se genera mediante la electrólisis de una solución salina diluida. Es eficaz contra bacterias, virus, hongos y esporas, pero no tóxico para las personas ni corrosivo para los materiales.</p>
+            <ul>
+              <li>Elimina el 99,999 % de patógenos en segundos.</li>
+              <li>No irrita la piel ni las vías respiratorias.</li>
+              <li>Se descompone en agua y sal, sin residuos.</li>
+              <li>Puede aplicarse en superficies, aire y agua.</li>
+            </ul>
+          </div>
+          <div class="content-media">
+            <img src="img/hocl-process.svg" alt="Proceso de generación de HOCl" />
+          </div>
+        </div>
+      </section>
 
-        <article class="reader-card">
-          <div id="status" class="status">Cargando contenido…</div>
-          <div id="reader" class="reader"></div>
-        </article>
+      <!-- Evidencia científica -->
+      <section class="section-block" id="evidencia">
+        <div class="section-title">
+          <h3>Evidencia científica</h3>
+          <p>Estudios respaldan la eficacia del HOCl en entornos deportivos y sanitarios.</p>
+        </div>
+        <div class="cards-grid">
+          <article class="card">
+            <h4>EPA y FDA</h4>
+            <p>Registrado como desinfectante de nivel intermedio‑alto, aprobado para uso en superficies de contacto con alimentos y en entornos médicos.</p>
+          </article>
+          <article class="card">
+            <h4>Estudio en gimnasios (2021)</h4>
+            <p>Reducción del 99,9 % de carga bacteriana en equipos de entrenamiento tras aplicación de HOCl nebulizado.</p>
+          </article>
+          <article class="card">
+            <h4>Comparativa con lejía</h4>
+            <p>El HOCl es hasta 80 veces más eficaz que el hipoclorito sódico a igual concentración de cloro libre.</p>
+          </article>
+          <article class="card">
+            <h4>Seguridad toxicológica</h4>
+            <p>No produce compuestos orgánicos volátiles (COV) ni subproductos cancerígenos.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Beneficios -->
+      <section class="section-block" id="beneficios">
+        <div class="section-title">
+          <h3>Beneficios para tu gimnasio</h3>
+          <p>Adopta una solución que cuida de tus clientes, tu equipo y el medio ambiente.</p>
+        </div>
+        <div class="cards-grid">
+          <article class="card">
+            <h4>Protección continua</h4>
+            <p>Efecto residual que mantiene las superficies desinfectadas entre limpiezas.</p>
+          </article>
+          <article class="card">
+            <h4>Sin olores molestos</h4>
+            <p>No desprende vapores irritantes; el ambiente se mantiene fresco.</p>
+          </article>
+          <article class="card">
+            <h4>Compatibilidad total</h4>
+            <p>No daña goma, plástico, metal ni telas; prolonga la vida útil de los equipos.</p>
+          </article>
+          <article class="card">
+            <h4>Reducción de costes</h4>
+            <p>Se produce in situ con agua, sal y electricidad, eliminando la compra de productos desechables.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Testimonios -->
+      <section class="section-block" id="testimonios">
+        <div class="section-title">
+          <h3>Lo que dicen los profesionales</h3>
+          <p>Dueños de gimnasios y entrenadores que ya confían en HOCl.</p>
+        </div>
+        <div class="testimonials-grid">
+          <blockquote class="testimonial-card">
+            <p>“Desde que usamos HOCl, las bajas por infecciones cutáneas se redujeron drásticamente. Nuestros clientes notan la diferencia.”</p>
+            <footer>— Laura M., gerente de FitZone</footer>
+          </blockquote>
+          <blockquote class="testimonial-card">
+            <p>“Es increíblemente eficaz y no deja olor a cloro. Lo aplicamos en colchonetas y pesas varias veces al día.”</p>
+            <footer>— Carlos R., entrenador personal</footer>
+          </blockquote>
+          <blockquote class="testimonial-card">
+            <p>“La inversión en un generador de HOCl se amortizó en pocos meses. Ahora ahorramos en productos químicos.”</p>
+            <footer>— Ana S., propietaria de StrongBox Gym</footer>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- CTA (descarga de guía) -->
+      <section class="section-block cta-block" id="cta">
+        <div class="cta-content">
+          <h3>Descarga la guía gratuita</h3>
+          <p>Aprende a implementar el ácido hipocloroso en tu gimnasio paso a paso: dosificación, aplicación, mantenimiento y normativa.</p>
+          <form class="cta-form" action="#" method="post">
+            <label for="cta-email">Correo electrónico</label>
+            <input type="email" id="cta-email" name="email" placeholder="tu@correo.com" required />
+            <button type="submit" class="btn primary">Descargar guía</button>
+          </form>
+          <p class="cta-note">Sin spam. Recibirás solo información relevante sobre HOCl.</p>
+        </div>
       </section>
     </main>
-  </div>
 
-  <script>
-    const reader = document.getElementById('reader');
-    const toc = document.getElementById('toc');
-    const status = document.getElementById('status');
-    const searchInput = document.getElementById('search');
-    const sectionGrid = document.getElementById('section-grid');
-    const blockCount = document.getElementById('block-count');
-    const sectionCount = document.getElementById('section-count');
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="brand-mark">HOCL</div>
+          <p>Ácido hipocloroso para gimnasios</p>
+        </div>
+        <nav class="footer-nav" aria-label="Enlaces del pie">
+          <a href="#hero">Inicio</a>
+          <a href="#problemas">Problemas</a>
+          <a href="#solucion">Solución</a>
+          <a href="#evidencia">Evidencia</a>
+          <a href="#beneficios">Beneficios</a>
+          <a href="#testimonios">Testimonios</a>
+          <a href="#cta">Descargar guía</a>
+        </nav>
+        <div class="footer-legal">
+          <p>&copy; 2026 HOCl Gym Solutions. Todos los derechos reservados.</p>
+          <p>Esta página es informativa y no sustituye el asesoramiento profesional.</p>
+        </div>
+      </div>
+    </footer>
 
-    let allBlocks = [];
-    let allHeadings = [];
-
-    function escapeHtml(value) {
-      return String(value)
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/\"/g, '&quot;');
-    }
-
-    function formatInline(text) {
-      let html = escapeHtml(text);
-      html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-      html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
-      html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
-      html = html.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
-      return html;
-    }
-
-    function slugify(text, usedIds) {
-      const base = String(text).toLowerCase()
-        .normalize('NFKD').replace(/[\u0300-\u036f]/g, '')
-        .replace(/[^a-z0-9\s-]/g, '')
-        .trim().replace(/\s+/g, '-');
-      const safeBase = base || 'seccion';
-      let slug = safeBase;
-      let counter = 2;
-      while (usedIds[slug]) {
-        slug = `${safeBase}-${counter}`;
-        counter += 1;
-      }
-      usedIds[slug] = true;
-      return slug;
-    }
-
-    function parseMarkdown(markdown) {
-      const lines = markdown.replace(/\r\n/g, '\n').split('\n');
-      const blocks = [];
-      const tocItems = [];
-      const usedIds = {};
-      let i = 0;
-
-      const pushBlock = (html, text = '', type = 'text', headingLevel = 0, headingText = '') => {
-        blocks.push({ html, text, type, headingLevel, headingText });
-      };
-
-      while (i < lines.length) {
-        const raw = lines[i];
-        const line = raw.trim();
-
-        if (!line) { i++; continue; }
-
-        if (/^#{1,6}\s+/.test(line)) {
-          const level = line.match(/^#{1,6}/)[0].length;
-          const text = line.replace(/^#{1,6}\s+/, '').trim();
-          const id = slugify(text, usedIds);
-          const html = `<h${level} id="${id}">${formatInline(text)}</h${level}>`;
-          pushBlock(html, text, 'heading', level, text);
-          tocItems.push({ id, text, level });
-          i++; continue;
-        }
-
-        if (/^[-]{3,}$/.test(line)) {
-          pushBlock('<hr />', '', 'hr');
-          i++; continue;
-        }
-
-        if (/^>\s+/.test(line)) {
-          const paragraphs = [];
-          while (i < lines.length && lines[i].trim().startsWith('>')) {
-            paragraphs.push(lines[i].replace(/^>\s?/, '').trim());
-            i++;
-          }
-          const text = paragraphs.join(' ');
-          pushBlock(`<blockquote>${formatInline(text)}</blockquote>`, text, 'quote');
-          continue;
-        }
-
-        if (/^\|/.test(line)) {
-          const rows = [];
-          while (i < lines.length && /^\|/.test(lines[i].trim())) {
-            rows.push(lines[i].trim());
-            i++;
-          }
-          if (rows.length >= 2) {
-            const cells = rows.map(r => r.split('|').slice(1, -1).map(c => c.trim()));
-            const header = cells[0];
-            const separator = cells[1];
-            if (separator.every(c => /^:?-{3,}:?$/.test(c))) {
-              const bodyRows = cells.slice(2);
-              let html = '<table><thead><tr>' + header.map(h => `<th>${formatInline(h)}</th>`).join('') + '</tr></thead><tbody>';
-              bodyRows.forEach(row => {
-                html += '<tr>' + row.map(c => `<td>${formatInline(c)}</td>`).join('') + '</tr>';
-              });
-              html += '</tbody></table>';
-              pushBlock(html, rows.join(' '), 'table');
-              continue;
-            }
-          }
-        }
-
-        if (/^[-*]\s+/.test(line) || /^\d+\.\s+/.test(line)) {
-          const listType = /^\d+\.\s+/.test(line) ? 'ol' : 'ul';
-          const items = [];
-          while (i < lines.length) {
-            const current = lines[i].trim();
-            if (!current) break;
-            const match = current.match(/^([-*]\s+|\d+\.\s+)(.+)$/);
-            if (!match) break;
-            items.push(match[2]);
-            i++;
-          }
-          const html = `<${listType}>${items.map(item => `<li>${formatInline(item)}</li>`).join('')}</${listType}>`;
-          pushBlock(html, items.join(' '), 'list');
-          continue;
-        }
-
-        const paragraphLines = [];
-        while (i < lines.length) {
-          const current = lines[i].trim();
-          if (!current) break;
-          if (/^#{1,6}\s+/.test(current) || /^[-]{3,}$/.test(current) || /^\|/.test(current) || /^[-*]\s+/.test(current) || /^\d+\.\s+/.test(current) || /^>\s+/.test(current)) break;
-          paragraphLines.push(lines[i].trim());
-          i++;
-        }
-        const text = paragraphLines.join(' ');
-        if (text) {
-          const html = `<p>${formatInline(text)}</p>`;
-          pushBlock(html, text, 'paragraph');
-          continue;
-        }
-        i++;
-      }
-
-      return { blocks, tocItems };
-    }
-
-    function renderBlocks(blocks) {
-      reader.innerHTML = blocks.map(block => block.html).join('');
-      reader.querySelectorAll('h1,h2,h3,h4').forEach(heading => {
-        heading.setAttribute('data-heading', 'true');
-      });
-    }
-
-    function renderToc(items) {
-      if (!items.length) {
-        toc.innerHTML = '<p style="color:#8ca0b2">No hay secciones disponibles.</p>';
-        return;
-      }
-      toc.innerHTML = items.map(item => `<a class="level-${item.level}" href="#${item.id}">${item.text}</a>`).join('');
-      toc.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          toc.querySelectorAll('a').forEach(item => item.classList.remove('active'));
-          link.classList.add('active');
-        });
-      });
-    }
-
-    function renderSections(items) {
-      const featured = items.filter(item => item.level <= 2);
-      if (!featured.length) {
-        sectionGrid.innerHTML = '<div class="section-card"><span>Contenido</span><h4>No hay secciones para mostrar.</h4></div>';
-        return;
-      }
-      sectionGrid.innerHTML = featured.map(item => `
-        <a class="section-card" href="#${item.id}">
-          <span>${item.level === 1 ? 'Capítulo' : 'Tema'}</span>
-          <h4>${item.text}</h4>
-        </a>
-      `).join('');
-    }
-
-    function applyFilter(term) {
-      const normalized = term.trim().toLowerCase();
-      if (!normalized) {
-        renderBlocks(allBlocks);
-        renderToc(allHeadings);
-        renderSections(allHeadings);
-        blockCount.textContent = allBlocks.length;
-        sectionCount.textContent = allHeadings.filter(item => item.level <= 2).length;
-        return;
-      }
-
-      const filtered = allBlocks.filter(block => {
-        const searchText = `${block.text} ${block.headingText}`.toLowerCase();
-        return searchText.includes(normalized);
-      });
-      const matchingHeadings = allHeadings.filter(item => item.text.toLowerCase().includes(normalized));
-      renderBlocks(filtered);
-      renderToc(matchingHeadings);
-      renderSections(matchingHeadings);
-      blockCount.textContent = filtered.length;
-      sectionCount.textContent = matchingHeadings.filter(item => item.level <= 2).length;
-    }
-
-    async function loadBook() {
-      try {
-        const response = await fetch('./ebook-hocl.md');
-        if (!response.ok) throw new Error('No se pudo cargar el archivo');
-        const markdown = await response.text();
-        const parsed = parseMarkdown(markdown);
-        allBlocks = parsed.blocks;
-        allHeadings = parsed.tocItems;
-        renderBlocks(allBlocks);
-        renderToc(allHeadings);
-        renderSections(allHeadings);
-        blockCount.textContent = allBlocks.length;
-        sectionCount.textContent = allHeadings.filter(item => item.level <= 2).length;
-        status.textContent = `Contenido cargado: ${allBlocks.length} bloques renderizados`;
-      } catch (error) {
-        status.textContent = 'No se pudo cargar el archivo Markdown. Abre esta página desde un servidor local como http://localhost:8000/index.html';
-        reader.innerHTML = '<p class="note">Para ver el contenido completo, es necesario abrir la página desde un servidor local porque el navegador bloquea la carga del archivo Markdown cuando se abre como archivo local.</p>';
-      }
-    }
-
-    searchInput.addEventListener('input', e => applyFilter(e.target.value));
-    loadBook();
-  </script>
-</body>
+    <script src="js/main.js"></script>
+    <script src="js/form.js"></script>
+  </body>
 </html>
