@@ -1,0 +1,24 @@
+body {
+  min-height: 100vh;
+}
+
+main {
+  width: min(1200px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+}
+
+section {
+  margin-bottom: 1.5rem;
+}
+
+.container {
+  width: 100%;
+}
+
+@media (max-width: 720px) {
+  main {
+    width: min(100% - 1.25rem, 1200px);
+    padding: 1rem 0 2rem;
+  }
+}
