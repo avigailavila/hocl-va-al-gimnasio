@@ -43,12 +43,41 @@
           </div>
         </div>
         <div class="hero-image">
-          <!-- Imagen ilustrativa (placeholder) -->
-          <img src="img/hero-placeholder.svg" alt="Gimnasio desinfectado con HOCl" />
+          <picture>
+            <source srcset="assets/images/spinning-deportista.png" media="(min-width: 768px)">
+            <img src="assets/images/spinning-deportista.png" 
+                 alt="Deportista femenina haciendo spinning en el gimnasio" 
+                 loading="eager"
+                 width="1200" 
+                 height="800"
+                 class="responsive-img hero-img"
+                 fetchpriority="high">
+          </picture>
         </div>
       </section>
 
-      <section class="bg-white py-12 border-b border-emerald-100"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="grid grid-cols-2 md:grid-cols-4 gap-8"><div class="text-center"><div class="stat-number">99.99%</div><div class="text-sm font-semibold text-gray-500 mt-1">de eliminación de patógenos</div></div><div class="text-center"><div class="stat-number">100%</div><div class="text-sm font-semibold text-gray-500 mt-1">Natural y biodegradable</div></div><div class="text-center"><div class="stat-number">&lt;30s</div><div class="text-sm font-semibold text-gray-500 mt-1">Tiempo de acción</div></div><div class="text-center"><div class="stat-number">pH 5-6</div><div class="text-sm font-semibold text-gray-500 mt-1">Rango óptimo de efectividad</div></div></div></div></section>
+      <!-- Stats bar -->
+      <section class="stats-bar">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number">99.99%</div>
+            <div class="stat-label">de eliminación de patógenos</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Natural y biodegradable</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">&lt;30s</div>
+            <div class="stat-label">Tiempo de acción</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">pH 5-6</div>
+            <div class="stat-label">Rango óptimo de efectividad</div>
+          </div>
+        </div>
+      </section>
+
       <!-- Problemas -->
       <section class="section-block" id="problemas">
         <div class="section-title">
@@ -59,18 +88,34 @@
           <article class="card">
             <h4>Superficies contaminadas</h4>
             <p>Máquinas, pesas, colchonetas y vestuarios acumulan microorganismos que sobreviven horas o días.</p>
+            <img src="assets/images/superficies-contaminadas.png" 
+                 alt="Superficies de gimnasio contaminadas con microorganismos" 
+                 class="card-image"
+                 loading="lazy">
           </article>
           <article class="card">
             <h4>Infecciones cutáneas</h4>
             <p>Hongos como el pie de atleta y bacterias como el estafilococo se transmiten por contacto directo.</p>
+            <img src="assets/images/pie-atleta-hongos.png" 
+                 alt="Infección por hongos tipo pie de atleta en entorno deportivo" 
+                 class="card-image"
+                 loading="lazy">
           </article>
           <article class="card">
             <h4>Virus respiratorios</h4>
             <p>Gripe, resfriados y COVID‑19 se propagan en espacios cerrados con alta afluencia de personas.</p>
+            <img src="assets/images/transmision-virus.png" 
+                 alt="Transmisión de virus respiratorios en espacios cerrados" 
+                 class="card-image"
+                 loading="lazy">
           </article>
           <article class="card">
             <h4>Productos agresivos</h4>
             <p>Muchos desinfectantes convencionales irritan la piel, dañan equipos y dejan olores fuertes.</p>
+            <img src="assets/images/desinfectantes-agresivos.png" 
+                 alt="Productos desinfectantes agresivos que dañan equipos y piel" 
+                 class="card-image"
+                 loading="lazy">
           </article>
         </div>
       </section>
@@ -83,7 +128,8 @@
         </div>
         <div class="content-row">
           <div class="content-text">
-            <p>El HOCl se genera mediante la electrólisis de una solución salina diluida. Es eficaz contra bacterias, virus, hongos y esporas, pero no tóxico para las personas ni corrosivo para los materiales.</p>
+            <p>El HOCl no es un químico artificial: <strong>tu propio cuerpo lo produce</strong>. Cuando un neutrófilo (glóbulo blanco) detecta un patógeno, desencadena el <strong>estallido respiratorio</strong>, un proceso que genera ácido hipocloroso para destruir bacterias, virus y hongos de forma natural.</p>
+            <p>El HOCl sintético se genera mediante la electrólisis de una solución salina diluida, imitando este proceso biológico. Es eficaz contra bacterias, virus, hongos y esporas, pero no tóxico para las personas ni corrosivo para los materiales.</p>
             <ul>
               <li>Elimina el 99,999 % de patógenos en segundos.</li>
               <li>No irrita la piel ni las vías respiratorias.</li>
@@ -92,7 +138,10 @@
             </ul>
           </div>
           <div class="content-media">
-            <img src="img/hocl-process.svg" alt="Proceso de generación de HOCl" />
+            <img src="assets/images/estallido-respiratorio.png" 
+                 alt="Diagrama del estallido respiratorio: el neutrófilo (glóbulo blanco) ataca y fagocita patógenos generando HOCl de forma natural" 
+                 class="card-image"
+                 loading="lazy">
           </div>
         </div>
       </section>
@@ -107,18 +156,41 @@
           <article class="card">
             <h4>EPA y FDA</h4>
             <p>Registrado como desinfectante de nivel intermedio‑alto, aprobado para uso en superficies de contacto con alimentos y en entornos médicos.</p>
+            <img src="assets/images/fda-epa.png" 
+                 alt="Producto aprobado por la FDA y la EPA como desinfectante de nivel intermedio-alto" 
+                 class="card-image"
+                 loading="lazy">
           </article>
           <article class="card">
             <h4>Estudio en gimnasios (2021)</h4>
             <p>Reducción del 99,9 % de carga bacteriana en equipos de entrenamiento tras aplicación de HOCl nebulizado.</p>
+            <a href="assets/documents/Gym_Pathogen_Analysis.pdf" target="_blank" class="presentation-link">
+              <img src="assets/images/comparativa-hocl.png" 
+                   alt="Presentación Gym Pathogen Analysis - Haz clic para ver" 
+                   class="card-image presentation-thumb"
+                   loading="lazy">
+              <span class="presentation-badge">📊 Ver presentación</span>
+            </a>
+            <audio controls class="podcast-player">
+              <source src="assets/audio/podcast-estudio-gimnasio.mp3" type="audio/mpeg">
+              Tu navegador no soporta el reproductor de audio.
+            </audio>
           </article>
           <article class="card">
             <h4>Comparativa con lejía</h4>
             <p>El HOCl es hasta 80 veces más eficaz que el hipoclorito sódico a igual concentración de cloro libre.</p>
+            <img src="assets/images/comparativa-hocl.png" 
+                 alt="Comparativa del HOCl con lejía, amonio cuaternario y alcohol" 
+                 class="card-image"
+                 loading="lazy">
           </article>
           <article class="card">
             <h4>Seguridad toxicológica</h4>
             <p>No produce compuestos orgánicos volátiles (COV) ni subproductos cancerígenos.</p>
+            <img src="assets/images/hocl-no-toxico.png" 
+                 alt="El HOCl no es tóxico ni cancerígeno, a diferencia de otros desinfectantes" 
+                 class="card-image"
+                 loading="lazy">
           </article>
         </div>
       </section>
@@ -133,18 +205,26 @@
           <article class="card">
             <h4>Protección continua</h4>
             <p>Efecto residual que mantiene las superficies desinfectadas entre limpiezas.</p>
+            <img src="assets/images/hero-levantador-pesas.png" 
+                 alt="Escudo protector en equipos de gimnasio gracias al HOCl" 
+                 class="card-image"
+                 loading="lazy">
           </article>
           <article class="card">
             <h4>Sin olores molestos</h4>
             <p>No desprende vapores irritantes; el ambiente se mantiene fresco.</p>
+            <img src="assets/images/sin-olores.png" 
+                 alt="Deportistas disfrutando de un ambiente fresco y sin olores químicos" 
+                 class="card-image"
+                 loading="lazy">
           </article>
           <article class="card">
             <h4>Compatibilidad total</h4>
             <p>No daña goma, plástico, metal ni telas; prolonga la vida útil de los equipos.</p>
-          </article>
-          <article class="card">
-            <h4>Reducción de costes</h4>
-            <p>Se produce in situ con agua, sal y electricidad, eliminando la compra de productos desechables.</p>
+            <img src="assets/images/compatibilidad-equipos.png" 
+                 alt="Equipos de gimnasio perfectamente compatibles con HOCl" 
+                 class="card-image"
+                 loading="lazy">
           </article>
         </div>
       </section>
@@ -168,6 +248,12 @@
             <p>“La inversión en un generador de HOCl se amortizó en pocos meses. Ahora ahorramos en productos químicos.”</p>
             <footer>— Ana S., propietaria de StrongBox Gym</footer>
           </blockquote>
+        </div>
+        <div class="testimonials-image-wrapper">
+          <img src="assets/images/hero-levantador-pesas.png" 
+               alt="Levantador de pesas en el gimnasio - testimonio visual de la fortaleza que protege HOCl" 
+               class="testimonial-landscape"
+               loading="lazy">
         </div>
       </section>
 
