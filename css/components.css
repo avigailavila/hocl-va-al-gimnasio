@@ -523,6 +523,14 @@
   box-shadow: var(--shadow-sm);
 }
 
+@media (max-width: 768px) {
+  .testimonial-landscape {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
 /* ===== Reproductor de podcast ===== */
 .podcast-player {
   width: 100%;
