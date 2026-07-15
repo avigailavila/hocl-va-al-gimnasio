@@ -178,10 +178,10 @@ main {
   .hero {
     grid-template-columns: 1fr;
     grid-template-areas:
-      "copy"
-      "image";
-    padding: 2.5rem 0.75rem;
-    gap: 1.5rem;
+      "image"
+      "copy";
+    padding: 1.5rem 0.75rem 2.5rem;
+    gap: 1.25rem;
   }
 
   .hero-copy {
@@ -189,8 +189,14 @@ main {
   }
 
   .hero-image {
-    max-width: 350px;
+    max-width: 100%;
     justify-self: center;
+  }
+
+  .hero-img {
+    max-height: none;
+    object-fit: contain;
+    border-radius: var(--border-radius-md);
   }
 
   .hero-copy h2 {
