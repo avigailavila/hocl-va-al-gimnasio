@@ -1129,6 +1129,7 @@
 /* Hero en móvil: imagen arriba del texto, ancho completo */
 @media (max-width: 768px) {
   .hero {
+    grid-template-columns: 1fr;
     grid-template-areas:
       "image"
       "copy";
