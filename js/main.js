@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Desplazamiento suave
       targetElement.scrollIntoView({
         behavior: 'smooth',
-        block: 'start',
+        block: targetId === '#footer' ? 'end' : 'start',
       });
     });
   });
@@ -106,7 +106,123 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ============================================================
-  // 4. (Opcional) Añadir estilos CSS para las animaciones
+  // 4. Menú lateral flotante
+  // ============================================================
+  const sideToggle = document.getElementById('sideMenuToggle');
+  const sidePanel = document.getElementById('sideMenuPanel');
+  const sideLinks = sidePanel ? sidePanel.querySelectorAll('a') : [];
+
+  // Crear overlay
+  const overlay = document.createElement('div');
+  overlay.className = 'side-menu-overlay';
+  document.body.appendChild(overlay);
+
+  function openSideMenu() {
+    if (!sideToggle || !sidePanel) return;
+    sidePanel.classList.add('open');
+    sideToggle.classList.add('active');
+    sideToggle.setAttribute('aria-expanded', 'true');
+    sideToggle.setAttribute('aria-label', 'Cerrar menú de navegación');
+    overlay.classList.add('visible');
+  }
+
+  function closeSideMenu() {
+    if (!sideToggle || !sidePanel) return;
+    sidePanel.classList.remove('open');
+    sideToggle.classList.remove('active');
+    sideToggle.setAttribute('aria-expanded', 'false');
+    sideToggle.setAttribute('aria-label', 'Abrir menú de navegación');
+    overlay.classList.remove('visible');
+  }
+
+  if (sideToggle && sidePanel) {
+    sideToggle.addEventListener('click', () => {
+      if (sidePanel.classList.contains('open')) {
+        closeSideMenu();
+      } else {
+        openSideMenu();
+      }
+    });
+
+    // Cerrar al hacer clic en un enlace
+    sideLinks.forEach(link => {
+      link.addEventListener('click', closeSideMenu);
+    });
+
+    // Cerrar al hacer clic en el overlay
+    overlay.addEventListener('click', closeSideMenu);
+
+    // Cerrar con Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && sidePanel.classList.contains('open')) {
+        closeSideMenu();
+      }
+    });
+  }
+
+  // ============================================================
+  // 5. Lightbox para ampliación de imágenes en tarjetas
+  // ============================================================
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  const lightboxClose = document.getElementById('lightboxClose');
+
+  function openLightbox(imgElement) {
+    if (!lightbox || !lightboxImg) return;
+    lightboxImg.src = imgElement.src;
+    lightboxImg.alt = imgElement.alt;
+    const card = imgElement.closest('.card');
+    const heading = card ? card.querySelector('h4') : null;
+    lightboxCaption.textContent = heading ? heading.textContent : imgElement.alt;
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    if (!lightbox || !lightboxImg) return;
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    lightboxImg.src = '';
+    document.body.style.overflow = '';
+  }
+
+  // Delegación de eventos: escuchar clicks en todo el documento
+  document.addEventListener('click', (e) => {
+    // Abrir lightbox si el clic fue en una imagen de tarjeta o del hero
+    const cardImage = e.target.closest('.card-image, .hero-img');
+    if (cardImage) {
+      e.preventDefault();
+      openLightbox(cardImage);
+      return;
+    }
+
+    // Cerrar lightbox si el clic fue en el fondo (no en la imagen ni en el botón close)
+    if (lightbox && lightbox.classList.contains('open')) {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    }
+  });
+
+  // Botón cerrar
+  if (lightboxClose) {
+    lightboxClose.addEventListener('click', (e) => {
+      e.stopPropagation();
+      closeLightbox();
+    });
+  }
+
+  // Cerrar con Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox && lightbox.classList.contains('open')) {
+      closeLightbox();
+    }
+  });
+
+  // ============================================================
+  // 6. (Opcional) Añadir estilos CSS para las animaciones
   //    Se inyectan dinámicamente para no depender de un archivo externo
   // ============================================================
   const style = document.createElement('style');

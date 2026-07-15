@@ -10,6 +10,24 @@
     <link rel="stylesheet" href="css/components.css" />
   </head>
   <body>
+    <!-- Menú lateral flotante (siempre visible) -->
+    <div class="side-menu" id="sideMenu">
+      <button class="side-menu-toggle" id="sideMenuToggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="side-menu-panel" id="sideMenuPanel" aria-label="Menú lateral">
+        <a href="#hero">Inicio</a>
+        <a href="#problemas">Problemas</a>
+        <a href="#solucion">Solución</a>
+        <a href="#evidencia">Evidencia</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#footer">Contacto</a>
+      </nav>
+    </div>
+
     <!-- Header / Navegación -->
     <header class="topbar">
       <div class="brand">
@@ -26,7 +44,7 @@
         <a href="#evidencia">Evidencia</a>
         <a href="#beneficios">Beneficios</a>
         <a href="#testimonios">Testimonios</a>
-        <a href="#cta">Descargar guía</a>
+        <a href="#footer">Contacto</a>
       </nav>
     </header>
 
@@ -38,7 +56,6 @@
           <h2>Mantén tu gimnasio libre de patógenos con ácido hipocloroso</h2>
           <p>El ácido hipocloroso (HOCl) es un desinfectante de amplio espectro, seguro para personas y equipos, que elimina bacterias, virus y hongos sin dejar residuos tóxicos.</p>
           <div class="hero-actions">
-            <a class="btn primary" href="#cta">Descargar guía gratuita</a>
             <a class="btn secondary" href="#solucion">Conocer más</a>
           </div>
         </div>
@@ -88,32 +105,34 @@
           <article class="card">
             <h4>Superficies contaminadas</h4>
             <p>Máquinas, pesas, colchonetas y vestuarios acumulan microorganismos que sobreviven horas o días.</p>
-            <img src="assets/images/superficies-contaminadas.png" 
-                 alt="Superficies de gimnasio contaminadas con microorganismos" 
+            <img src="assets/images/superficies-contaminadas.png"
+                 alt="Superficies de gimnasio contaminadas con microorganismos"
                  class="card-image"
                  loading="lazy">
           </article>
           <article class="card">
             <h4>Infecciones cutáneas</h4>
             <p>Hongos como el pie de atleta y bacterias como el estafilococo se transmiten por contacto directo.</p>
-            <img src="assets/images/pie-atleta-hongos.png" 
-                 alt="Infección por hongos tipo pie de atleta en entorno deportivo" 
+            <img src="assets/images/pie-atleta-hongos.png"
+                 alt="Infección por hongos tipo pie de atleta en entorno deportivo"
                  class="card-image"
                  loading="lazy">
           </article>
           <article class="card">
             <h4>Virus respiratorios</h4>
             <p>Gripe, resfriados y COVID‑19 se propagan en espacios cerrados con alta afluencia de personas.</p>
-            <img src="assets/images/transmision-virus.png" 
-                 alt="Transmisión de virus respiratorios en espacios cerrados" 
+            <img src="assets/images/transmision-virus.png"
+                 alt="Transmisión de virus respiratorios en espacios cerrados"
                  class="card-image"
                  loading="lazy">
           </article>
-          <article class="card">
+        </div>
+        <div class="card-featured-wrapper">
+          <article class="card card-featured">
             <h4>Productos agresivos</h4>
             <p>Muchos desinfectantes convencionales irritan la piel, dañan equipos y dejan olores fuertes.</p>
-            <img src="assets/images/desinfectantes-agresivos.png" 
-                 alt="Productos desinfectantes agresivos que dañan equipos y piel" 
+            <img src="assets/images/desinfectantes-agresivos.png"
+                 alt="Productos desinfectantes agresivos que dañan equipos y piel"
                  class="card-image"
                  loading="lazy">
           </article>
@@ -136,6 +155,7 @@
               <li>Se descompone en agua y sal, sin residuos.</li>
               <li>Puede aplicarse en superficies, aire y agua.</li>
             </ul>
+            <a href="https://dbtltxbw057mh.cloudfront.net/" target="_blank" rel="noopener noreferrer" class="btn primary" style="margin-top: 1rem;">Más información sobre HOCl</a>
           </div>
           <div class="content-media">
             <img src="assets/images/estallido-respiratorio.png" 
@@ -163,10 +183,10 @@
           </article>
           <article class="card">
             <h4>Estudio en gimnasios (2021)</h4>
-            <p>Reducción del 99,9 % de carga bacteriana en equipos de entrenamiento tras aplicación de HOCl nebulizado.</p>
+            <p>Reducción del 99,99 % de carga bacteriana en equipos de entrenamiento tras aplicación de HOCl nebulizado.</p>
             <a href="assets/documents/Gym_Pathogen_Analysis.pdf" target="_blank" class="presentation-link">
-              <img src="assets/images/comparativa-hocl.png" 
-                   alt="Presentación Gym Pathogen Analysis - Haz clic para ver" 
+              <img src="assets/images/Imagen dela presentación.png"
+                   alt="Presentación Gym Pathogen Analysis - Haz clic para ver"
                    class="card-image presentation-thumb"
                    loading="lazy">
               <span class="presentation-badge">📊 Ver presentación</span>
@@ -204,9 +224,9 @@
         <div class="cards-grid">
           <article class="card">
             <h4>Protección continua</h4>
-            <p>Efecto residual que mantiene las superficies desinfectadas entre limpiezas.</p>
-            <img src="assets/images/hero-levantador-pesas.png" 
-                 alt="Escudo protector en equipos de gimnasio gracias al HOCl" 
+            <p>Siente la confianza que te brinda la protección molecular que tu cuerpo genera,</p>
+            <img src="assets/images/Proteccion_continua.png"
+                 alt="Protección continua en equipos de gimnasio gracias al efecto residual del HOCl"
                  class="card-image"
                  loading="lazy">
           </article>
@@ -257,8 +277,9 @@
         </div>
       </section>
 
-      <!-- CTA (descarga de guía) -->
-      <section class="section-block cta-block" id="cta">
+      <!-- TODO: Re-activar sección CTA cuando se indique -->
+      <!-- CTA (descarga de guía) DESACTIVADO TEMPORALMENTE -->
+      <section class="section-block cta-block" id="cta" style="display: none;">
         <div class="cta-content">
           <h3>Descarga la guía gratuita</h3>
           <p>Aprende a implementar el ácido hipocloroso en tu gimnasio paso a paso: dosificación, aplicación, mantenimiento y normativa.</p>
@@ -273,7 +294,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="footer-content">
         <div class="footer-brand">
           <div class="brand-mark">HOCL</div>
@@ -286,14 +307,47 @@
           <a href="#evidencia">Evidencia</a>
           <a href="#beneficios">Beneficios</a>
           <a href="#testimonios">Testimonios</a>
-          <a href="#cta">Descargar guía</a>
+          <a href="#footer">Contacto</a>
         </nav>
+        <div class="footer-contact-section">
+          <h4>Envíanos un correo electrónico</h4>
+          <p>Para mayor información, envía tu consulta a:</p>
+          <p class="footer-contact-name"><strong>Ing. Avigail Avila B</strong></p>
+          <p><a href="mailto:avigailavila01@gmail.com">avigailavila01@gmail.com</a></p>
+          <p class="footer-contact-note">Responderemos tu consulta a la brevedad posible.</p>
+
+          <div class="footer-contact-cards">
+            <div class="contact-card">
+              <span class="contact-icon">💬</span>
+              <h5>Consultas Generales</h5>
+              <p>Información sobre el ácido hipocloroso y sus beneficios.</p>
+            </div>
+            <div class="contact-card">
+              <span class="contact-icon">🔬</span>
+              <h5>Evidencia Científica</h5>
+              <p>Estudios, investigaciones y referencias bibliográficas.</p>
+            </div>
+            <div class="contact-card">
+              <span class="contact-icon">🤝</span>
+              <h5>Colaboraciones</h5>
+              <p>Propuestas de trabajo conjunto y divulgación científica.</p>
+            </div>
+          </div>
+        </div>
+
         <div class="footer-legal">
           <p>&copy; 2026 HOCl Gym Solutions. Todos los derechos reservados.</p>
           <p>Esta página es informativa y no sustituye el asesoramiento profesional.</p>
         </div>
       </div>
     </footer>
+
+    <!-- Lightbox para ampliación de imágenes -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar ampliación">&times;</button>
+      <img id="lightboxImg" src="" alt="" />
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
 
     <script src="js/main.js"></script>
     <script src="js/form.js"></script>
