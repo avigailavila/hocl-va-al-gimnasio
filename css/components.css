@@ -1126,6 +1126,39 @@
   text-align: center;
 }
 
+/* Hero en móvil: imagen arriba del texto, ancho completo */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-areas:
+      "image"
+      "copy";
+    padding: 1.5rem 0.75rem 2.5rem;
+    gap: 1.25rem;
+  }
+
+  .hero-image {
+    max-width: 100%;
+  }
+
+  .hero-img {
+    max-height: none;
+    object-fit: contain;
+    border-radius: var(--border-radius-md);
+  }
+
+  .hero-copy {
+    text-align: center;
+  }
+
+  .hero-copy h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero-copy p {
+    font-size: 1rem;
+  }
+}
+
 /* ===== Stats bar (debajo del hero) ===== */
 .stats-bar {
   background-color: #ffffff;
